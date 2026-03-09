@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
+import { ExternalLink } from "lucide-react"
 import { projects } from "@/lib/data"
 
 export default function Projects() {
@@ -43,12 +44,24 @@ export default function Projects() {
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-1.5">
-                {project.stack.map((tech) => (
-                  <Badge key={tech} variant="secondary" className="text-xs">
-                    {tech}
-                  </Badge>
-                ))}
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex flex-wrap gap-1.5">
+                  {project.stack.map((tech) => (
+                    <Badge key={tech} variant="secondary" className="text-xs">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+                {"link" in project && project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors shrink-0"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}

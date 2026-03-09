@@ -35,6 +35,15 @@ export const experience = [
 
 export const projects = [
   {
+    name: "Task Manager",
+    description:
+      "Aplicación fullstack de gestión de tareas con tablero kanban, autenticación y persistencia local. Backend en Spring Boot con JWT y PostgreSQL, frontend en Next.js.",
+    stack: ["Spring Boot", "Java", "Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "JWT"],
+    context: "Proyecto personal",
+    year: "2025",
+    link: "https://task-manager-sguerra.vercel.app",
+  },
+  {
     name: "Salud en Cercanía",
     description:
       "Aplicación web para geolocalización de servicios de salud. Permite a usuarios encontrar prestadores cercanos, comparar servicios y gestionar su perfil de salud.",
