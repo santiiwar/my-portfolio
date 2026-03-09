@@ -18,7 +18,7 @@ export const personal = {
 export const experience = [
   {
     company: "Perceptiva Tech",
-    role: "Technical Advisor / Developer",
+    role: "Semi Senior Developer",
     period: "Nov 2023 – Presente",
     location: "Montevideo, Uruguay",
     description: "Desarrollo backend y gestión de APIs para clientes de telecomunicaciones y banca.",
