@@ -44,22 +44,33 @@ export default function Projects() {
                 {project.description}
               </p>
 
-              <div className="flex items-center justify-between gap-2">
-                <div className="flex flex-wrap gap-1.5">
-                  {project.stack.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-                {"link" in project && project.link && (
+              <div className="flex flex-wrap gap-1.5 mb-3">
+                {project.stack.map((tech) => (
+                  <Badge key={tech} variant="secondary" className="text-xs">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+
+              <div className="flex gap-3">
+                {"repo" in project && project.repo && (
                   <a
-                    href={project.link}
+                    href={project.repo as string}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors shrink-0"
+                    className="text-xs text-muted-foreground hover:text-primary transition-colors"
                   >
-                    <ExternalLink className="w-4 h-4" />
+                    Repositorio
+                  </a>
+                )}
+                {"demo" in project && project.demo && (
+                  <a
+                    href={project.demo as string}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
+                  >
+                    Demo <ExternalLink className="w-3 h-3" />
                   </a>
                 )}
               </div>

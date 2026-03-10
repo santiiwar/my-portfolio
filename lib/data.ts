@@ -37,11 +37,12 @@ export const projects = [
   {
     name: "Task Manager",
     description:
-      "Aplicación fullstack de gestión de tareas con tablero kanban, autenticación y persistencia local. Backend en Spring Boot con JWT y PostgreSQL, frontend en Next.js.",
-    stack: ["Spring Boot", "Java", "Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "JWT"],
+      "Aplicación fullstack de gestión de tareas con tablero kanban y autenticación JWT. Backend desarrollado en Java con Spring Boot y PostgreSQL, frontend en Next.js (demo solo frontend).",
+    stack: ["Java", "Spring Boot", "JWT", "PostgreSQL", "Next.js", "TypeScript", "Tailwind CSS"],
     context: "Proyecto personal",
     year: "2025",
-    link: "https://task-manager-sguerra.vercel.app",
+    demo: "https://task-manager-sguerra.vercel.app",
+    repo: "https://github.com/santiiwar/task-manager",
   },
   {
     name: "Salud en Cercanía",
